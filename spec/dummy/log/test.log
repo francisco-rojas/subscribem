@@ -1,0 +1,115 @@
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Started GET "/subscribem/" for 127.0.0.1 at 2014-10-20 19:24:17 -0600
+Processing by Subscribem::DashboardController#index as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/dashboard/index.html.erb within layouts/subscribem/application (28.0ms)
+Completed 500 Internal Server Error in 77ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/subscribem/" for 127.0.0.1 at 2014-10-20 19:30:54 -0600
+Processing by Subscribem::DashboardController#index as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/dashboard/index.html.erb within layouts/subscribem/application (1.6ms)
+Completed 200 OK in 53ms (Views: 53.2ms | ActiveRecord: 0.0ms)
+Started GET "/subscribem/sign_up" for 127.0.0.1 at 2014-10-20 19:30:54 -0600
+Processing by Subscribem::AccountsController#new as HTML
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (101.5ms)[0m  [1mCREATE TABLE "subscribem_accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (82.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (124.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (83.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141021013131')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/subscribem/" for 127.0.0.1 at 2014-10-20 19:52:37 -0600
+Processing by Subscribem::DashboardController#index as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/dashboard/index.html.erb within layouts/subscribem/application (1.4ms)
+Completed 200 OK in 43ms (Views: 42.9ms | ActiveRecord: 0.0ms)
+Started GET "/subscribem/sign_up" for 127.0.0.1 at 2014-10-20 19:52:37 -0600
+Processing by Subscribem::AccountsController#new as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/accounts/new.html.erb within layouts/subscribem/application (156.4ms)
+Completed 200 OK in 161ms (Views: 159.2ms | ActiveRecord: 0.3ms)
+Started POST "/subscribem/accounts" for 127.0.0.1 at 2014-10-20 19:52:37 -0600
+Processing by Subscribem::AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"name"=>"Test"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "subscribem_accounts" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-10-21 01:52:37.386764"], ["name", "Test"], ["updated_at", "2014-10-21 01:52:37.386764"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/subscribem/
+Completed 302 Found in 14ms (ActiveRecord: 0.5ms)
+Started GET "/subscribem/" for 127.0.0.1 at 2014-10-20 19:52:37 -0600
+Processing by Subscribem::DashboardController#index as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/dashboard/index.html.erb within layouts/subscribem/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/subscribem/" for 127.0.0.1 at 2014-10-20 19:52:54 -0600
+Processing by Subscribem::DashboardController#index as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/dashboard/index.html.erb within layouts/subscribem/application (1.6ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+Started GET "/subscribem/sign_up" for 127.0.0.1 at 2014-10-20 19:52:54 -0600
+Processing by Subscribem::AccountsController#new as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/accounts/new.html.erb within layouts/subscribem/application (78.7ms)
+Completed 200 OK in 83ms (Views: 81.2ms | ActiveRecord: 0.3ms)
+Started POST "/subscribem/accounts" for 127.0.0.1 at 2014-10-20 19:52:54 -0600
+Processing by Subscribem::AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"name"=>"Test"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "subscribem_accounts" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-10-21 01:52:54.710584"], ["name", "Test"], ["updated_at", "2014-10-21 01:52:54.710584"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/subscribem/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+Started GET "/subscribem/" for 127.0.0.1 at 2014-10-20 19:52:54 -0600
+Processing by Subscribem::DashboardController#index as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/dashboard/index.html.erb within layouts/subscribem/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/subscribem/" for 127.0.0.1 at 2014-10-20 19:57:10 -0600
+Processing by Subscribem::DashboardController#index as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/dashboard/index.html.erb within layouts/subscribem/application (1.5ms)
+Completed 200 OK in 24ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+Started GET "/subscribem/sign_up" for 127.0.0.1 at 2014-10-20 19:57:10 -0600
+Processing by Subscribem::AccountsController#new as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/accounts/new.html.erb within layouts/subscribem/application (77.9ms)
+Completed 200 OK in 82ms (Views: 80.6ms | ActiveRecord: 0.3ms)
+Started POST "/subscribem/accounts" for 127.0.0.1 at 2014-10-20 19:57:10 -0600
+Processing by Subscribem::AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"name"=>"Test"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "subscribem_accounts" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-10-21 01:57:10.969869"], ["name", "Test"], ["updated_at", "2014-10-21 01:57:10.969869"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/subscribem/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+Started GET "/subscribem/" for 127.0.0.1 at 2014-10-20 19:57:10 -0600
+Processing by Subscribem::DashboardController#index as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/dashboard/index.html.erb within layouts/subscribem/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/subscribem/" for 127.0.0.1 at 2014-10-20 19:58:47 -0600
+Processing by Subscribem::DashboardController#index as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/dashboard/index.html.erb within layouts/subscribem/application (1.4ms)
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+Started GET "/subscribem/sign_up" for 127.0.0.1 at 2014-10-20 19:58:47 -0600
+Processing by Subscribem::AccountsController#new as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/accounts/new.html.erb within layouts/subscribem/application (77.8ms)
+Completed 200 OK in 82ms (Views: 80.1ms | ActiveRecord: 0.4ms)
+Started POST "/subscribem/accounts" for 127.0.0.1 at 2014-10-20 19:58:47 -0600
+Processing by Subscribem::AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"name"=>"Test"}, "commit"=>"Create Account"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "subscribem_accounts" ("created_at", "name", "updated_at") VALUES (?, ?, ?)  [["created_at", "2014-10-21 01:58:47.294782"], ["name", "Test"], ["updated_at", "2014-10-21 01:58:47.294782"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/subscribem/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+Started GET "/subscribem/" for 127.0.0.1 at 2014-10-20 19:58:47 -0600
+Processing by Subscribem::DashboardController#index as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/dashboard/index.html.erb within layouts/subscribem/application (0.3ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
