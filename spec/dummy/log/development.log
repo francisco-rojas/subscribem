@@ -41,3 +41,206 @@ Migrating to AddSubdomainToSubscribemAccounts (20141116235625)
             FROM sqlite_temp_master
             WHERE name='index_subscribem_accounts_on_subdomain' AND type='index'
 [0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-16 20:03:52 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/railties-4.1.6/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 29ms (Views: 28.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/suscriem/account/new" for 127.0.0.1 at 2014-11-16 20:04:03 -0600
+
+ActionController::RoutingError (No route matches [GET] "/suscriem/account/new"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/jose/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/jose/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/jose/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.2ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.3ms)
+
+
+Started GET "/subscriem/account/new" for 127.0.0.1 at 2014-11-16 20:04:19 -0600
+
+ActionController::RoutingError (No route matches [GET] "/subscriem/account/new"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/jose/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/jose/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/jose/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.7ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.4ms)
+
+
+Started GET "/subscribem/account/new" for 127.0.0.1 at 2014-11-16 20:04:25 -0600
+
+ActionController::RoutingError (No route matches [GET] "/account/new"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/jose/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/jose/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/jose/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.2ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.4ms)
+
+
+Started GET "/subscribem/accounts/new" for 127.0.0.1 at 2014-11-16 20:04:28 -0600
+
+ActionController::RoutingError (No route matches [GET] "/accounts/new"):
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/jose/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/jose/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/jose/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.3ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /home/jose/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (15.8ms)
+
+
+Started GET "/subscribem/sign_up" for 127.0.0.1 at 2014-11-16 20:05:19 -0600
+Processing by Subscribem::AccountsController#new as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/accounts/new.html.erb within layouts/subscribem/application (25.4ms)
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/shared/_flash_messages.html.erb (0.5ms)
+Completed 200 OK in 148ms (Views: 111.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/subscribem/accounts.css?body=1" for 127.0.0.1 at 2014-11-16 20:05:19 -0600
+
+
+Started GET "/assets/subscribem/dashboard.css?body=1" for 127.0.0.1 at 2014-11-16 20:05:19 -0600
+
+
+Started GET "/assets/subscribem/application.css?body=1" for 127.0.0.1 at 2014-11-16 20:05:19 -0600
+
+
+Started GET "/assets/subscribem/dashboard.js?body=1" for 127.0.0.1 at 2014-11-16 20:05:19 -0600
+
+
+Started GET "/assets/subscribem/application.js?body=1" for 127.0.0.1 at 2014-11-16 20:05:19 -0600
+
+
+Started GET "/assets/subscribem/accounts.js?body=1" for 127.0.0.1 at 2014-11-16 20:05:19 -0600
+
+
+Started POST "/subscribem/accounts" for 127.0.0.1 at 2014-11-16 20:05:24 -0600
+Processing by Subscribem::AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XcVlGxp91bcZb8e6bDvUJ1m3h56t8Ir+hpL2FzsbBjE=", "account"=>{"name"=>"", "subdomain"=>"", "owner_attributes"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}, "commit"=>"Create Account"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSubscribem::Account Exists (0.2ms)[0m  SELECT  1 AS one FROM "subscribem_accounts"  WHERE "subscribem_accounts"."subdomain" = '' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "subscribem_accounts"  WHERE "subscribem_accounts"."subdomain" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/accounts/new.html.erb within layouts/subscribem/application (5.2ms)
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/shared/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/subscribem/accounts.css?body=1" for 127.0.0.1 at 2014-11-16 20:05:25 -0600
+
+
+Started GET "/assets/subscribem/application.css?body=1" for 127.0.0.1 at 2014-11-16 20:05:25 -0600
+
+
+Started GET "/assets/subscribem/accounts.js?body=1" for 127.0.0.1 at 2014-11-16 20:05:25 -0600
+
+
+Started GET "/assets/subscribem/dashboard.css?body=1" for 127.0.0.1 at 2014-11-16 20:05:25 -0600
+
+
+Started GET "/assets/subscribem/application.js?body=1" for 127.0.0.1 at 2014-11-16 20:05:25 -0600
+
+
+Started GET "/assets/subscribem/dashboard.js?body=1" for 127.0.0.1 at 2014-11-16 20:05:25 -0600
