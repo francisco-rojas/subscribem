@@ -245,3 +245,42 @@ Processing by Subscribem::DashboardController#index as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "subscribem_users".* FROM "subscribem_users"  WHERE "subscribem_users"."id" = ? LIMIT 1  [["id", 1]]
 Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.2ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (106.7ms)[0m  DROP TABLE "subscribem_accounts"
+  [1m[36m (75.4ms)[0m  [1mCREATE TABLE "subscribem_accounts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime, "owner_id" integer, "subdomain" varchar(255)) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (116.6ms)[0m  [1mCREATE  INDEX "index_subscribem_accounts_on_subdomain" ON "subscribem_accounts" ("subdomain")[0m
+  [1m[35m (101.0ms)[0m  DROP TABLE "subscribem_users"
+  [1m[36m (83.8ms)[0m  [1mCREATE TABLE "subscribem_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_digest" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (99.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141116235625')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/subscribem/" for 127.0.0.1 at 2014-11-16 18:16:05 -0600
+Processing by Subscribem::DashboardController#index as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/dashboard/index.html.erb within layouts/subscribem/application (1.4ms)
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/shared/_flash_messages.html.erb (7.5ms)
+Completed 200 OK in 92ms (Views: 92.2ms | ActiveRecord: 0.0ms)
+Started GET "/subscribem/sign_up" for 127.0.0.1 at 2014-11-16 18:16:05 -0600
+Processing by Subscribem::AccountsController#new as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/accounts/new.html.erb within layouts/subscribem/application (21.6ms)
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/shared/_flash_messages.html.erb (0.2ms)
+Completed 200 OK in 46ms (Views: 24.2ms | ActiveRecord: 0.7ms)
+Started POST "/subscribem/accounts" for 127.0.0.1 at 2014-11-16 18:16:05 -0600
+Processing by Subscribem::AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "account"=>{"name"=>"Test", "subdomain"=>"test", "owner_attributes"=>{"email"=>"subscribem@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}, "commit"=>"Create Account"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "subscribem_users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", "2014-11-17 00:16:05.309985"], ["email", "subscribem@example.com"], ["password_digest", "$2a$04$H4LVm9Bn1ko1dcxT2F.NQOeoYW/gtkSxusyDLDpOAENIDFI8/RZdy"], ["updated_at", "2014-11-17 00:16:05.309985"]]
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "subscribem_accounts" ("created_at", "name", "owner_id", "subdomain", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-11-17 00:16:05.313353"], ["name", "Test"], ["owner_id", 1], ["subdomain", "test"], ["updated_at", "2014-11-17 00:16:05.313353"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.example.com/subscribem/
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms)
+Started GET "/subscribem/" for 127.0.0.1 at 2014-11-16 18:16:05 -0600
+Processing by Subscribem::DashboardController#index as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/dashboard/index.html.erb within layouts/subscribem/application (0.3ms)
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/shared/_flash_messages.html.erb (0.4ms)
+  [1m[35mSubscribem::User Load (0.2ms)[0m  SELECT  "subscribem_users".* FROM "subscribem_users"  WHERE "subscribem_users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "subscribem_users".* FROM "subscribem_users"  WHERE "subscribem_users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.3ms)[0m  rollback transaction

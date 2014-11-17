@@ -5,7 +5,7 @@ module Subscribem
     def current_account
       if user_signed_in?
         @current_account ||= begin
-          account_id = env["warden"].user(scope: :account)
+          account_id = warden.user(scope: :account)
           Subscribem::Account.find(account_id)
         end
       end
@@ -14,14 +14,19 @@ module Subscribem
     def current_user
       if user_signed_in?
         @current_user ||= begin
-          user_id = env["warden"].user(scope: :user)
+          user_id = warden.user(scope: :user)
           Subscribem::User.find(user_id)
         end
       end
     end
 
     def user_signed_in?
-      env["warden"].authenticated?(:user)
+      warden.authenticated?(:user)
     end
+
+    protected
+      def warden
+        env["warden"]
+      end
   end
 end
