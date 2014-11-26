@@ -1087,3 +1087,91 @@ Processing by Subscribem::Account::DashboardController#index as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "subscribem_users".* FROM "subscribem_users"  WHERE "subscribem_users"."id" = ? LIMIT 1  [["id", 1]]
 Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.3ms)
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "subscribem_users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-26 04:12:33.160918"], ["email", "test1@example.com"], ["password_digest", "$2a$04$3a6tgkAlaXHyYTRoKkF0DOLA1u79QXv0uvCstEWULasIJEzUZhenm"], ["updated_at", "2014-11-26 04:12:33.160918"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSubscribem::Account Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "subscribem_accounts"  WHERE "subscribem_accounts"."subdomain" = 'test1' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "subscribem_accounts" ("created_at", "name", "owner_id", "subdomain", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-11-26 04:12:33.175361"], ["name", "Test Account #1"], ["owner_id", 1], ["subdomain", "test1"], ["updated_at", "2014-11-26 04:12:33.175361"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-11-25 22:12:33 -0600
+Processing by Subscribem::Account::DashboardController#index as HTML
+Redirected to http://test1.example.com/sign_in
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+Started GET "/sign_in" for 127.0.0.1 at 2014-11-25 22:12:33 -0600
+Processing by Subscribem::Account::SessionsController#new as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/account/sessions/new.html.erb within layouts/subscribem/application (12.7ms)
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/shared/_flash_messages.html.erb (1.0ms)
+Completed 200 OK in 47ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+Started POST "/sign_in" for 127.0.0.1 at 2014-11-25 22:12:33 -0600
+Processing by Subscribem::Account::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"test1@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mSubscribem::User Load (0.2ms)[0m  SELECT  "subscribem_users".* FROM "subscribem_users"  WHERE "subscribem_users"."email" = 'test1@example.com' LIMIT 1
+Redirected to http://test1.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+Started GET "/" for 127.0.0.1 at 2014-11-25 22:12:33 -0600
+Processing by Subscribem::Account::DashboardController#index as HTML
+  [1m[36mSubscribem::User Load (0.2ms)[0m  [1mSELECT  "subscribem_users".* FROM "subscribem_users"  WHERE "subscribem_users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/account/dashboard/index.html.erb within layouts/subscribem/application (0.4ms)
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/shared/_flash_messages.html.erb (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "subscribem_users".* FROM "subscribem_users"  WHERE "subscribem_users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "subscribem_users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-26 04:12:33.278346"], ["email", "test2@example.com"], ["password_digest", "$2a$04$B9LCtUld5/oSzqhwixcOC.z2au4sDk49v6yNX2iko2KnPMtE07NS."], ["updated_at", "2014-11-26 04:12:33.278346"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSubscribem::Account Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "subscribem_accounts"  WHERE "subscribem_accounts"."subdomain" = 'test2' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "subscribem_accounts" ("created_at", "name", "owner_id", "subdomain", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-11-26 04:12:33.280960"], ["name", "Test Account #2"], ["owner_id", 1], ["subdomain", "test2"], ["updated_at", "2014-11-26 04:12:33.280960"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-11-25 22:12:33 -0600
+Processing by Subscribem::Account::DashboardController#index as HTML
+Redirected to http://test2.example.com/sign_in
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/sign_in" for 127.0.0.1 at 2014-11-25 22:12:33 -0600
+Processing by Subscribem::Account::SessionsController#new as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/account/sessions/new.html.erb within layouts/subscribem/application (3.3ms)
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/shared/_flash_messages.html.erb (1.2ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+Started POST "/sign_in" for 127.0.0.1 at 2014-11-25 22:12:33 -0600
+Processing by Subscribem::Account::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"test2@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mSubscribem::User Load (0.3ms)[0m  SELECT  "subscribem_users".* FROM "subscribem_users"  WHERE "subscribem_users"."email" = 'test2@example.com' LIMIT 1
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/account/sessions/new.html.erb within layouts/subscribem/application (1.9ms)
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/shared/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+Binary data inserted for `string` type on column `password_digest`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "subscribem_users" ("created_at", "email", "password_digest", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", "2014-11-26 04:12:33.336925"], ["email", "test3@example.com"], ["password_digest", "$2a$04$uhSZIVbghoXvLqeYIgjCt.WbnzhS66ZztLXg4boRz.5F4MSKSDnyu"], ["updated_at", "2014-11-26 04:12:33.336925"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSubscribem::Account Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "subscribem_accounts"  WHERE "subscribem_accounts"."subdomain" = 'test3' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "subscribem_accounts" ("created_at", "name", "owner_id", "subdomain", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-11-26 04:12:33.341134"], ["name", "Test Account #3"], ["owner_id", 1], ["subdomain", "test3"], ["updated_at", "2014-11-26 04:12:33.341134"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-11-25 22:12:33 -0600
+Processing by Subscribem::Account::DashboardController#index as HTML
+Redirected to http://test3.example.com/sign_in
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/sign_in" for 127.0.0.1 at 2014-11-25 22:12:33 -0600
+Processing by Subscribem::Account::SessionsController#new as HTML
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/account/sessions/new.html.erb within layouts/subscribem/application (2.5ms)
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/shared/_flash_messages.html.erb (0.8ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Started POST "/sign_in" for 127.0.0.1 at 2014-11-25 22:12:33 -0600
+Processing by Subscribem::Account::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"foo@example.com", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mSubscribem::User Load (0.3ms)[0m  SELECT  "subscribem_users".* FROM "subscribem_users"  WHERE "subscribem_users"."email" = 'foo@example.com' LIMIT 1
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/account/sessions/new.html.erb within layouts/subscribem/application (4.0ms)
+  Rendered /home/jose/Programming-Projects/subscribem/app/views/subscribem/shared/_flash_messages.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
